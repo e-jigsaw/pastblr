@@ -1,4 +1,4 @@
-pastblr-for-chrome
+pastblr
 ==================
 
 ```git clone``` this repo

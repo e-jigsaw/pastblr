@@ -1,6 +1,6 @@
 {
-  "name": "2years",
-  "description": "2years ago",
+  "name": "pastblr",
+  "description": "show past awesome posts",
   "author": "jigsaw <m@jgs.me>",
   "version": "0.0.1",
   "dependencies": {
