@@ -4,15 +4,22 @@ module.exports = (grunt)->
     jade:
       all:
         files:
-          "newTab.html": "newTab.jade"
+          "build/newTab.html": "src/newTab.jade"
     stylus:
       all:
         files:
-          "newTab.css": "newTab.styl"
+          "build/newTab.css": "src/newTab.styl"
+    copy:
+      manifest:
+        files:
+          'build/manifest.json': 'src/manifest.json'
     watch:
-      files: ["*.jade", "*.styl"]
+      files: ["src/*.jade", "src/*.styl"]
       tasks: ["jade", "stylus"]
 
   grunt.loadNpmTasks "grunt-contrib-jade"
   grunt.loadNpmTasks "grunt-contrib-stylus"
+  grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks "grunt-contrib-watch"
+
+  grunt.registerTask 'default', ['jade', 'stylus', 'copy']
